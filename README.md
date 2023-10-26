@@ -62,20 +62,14 @@ Los patrones arquitectónicos se pueden clasificar en tres categorías principal
 
 
 ### Ventajas de los patrones de diseño de arquitectura de software
-* Reutilización
-* Mejora de la calidad
-* Comunicación
+* presentan una reutilización optima, por lo que hace más fácil la uso y rendimiento de funcionalidades
+* Mejora de la calidad del código. 
 ### Desventajas de los patrones de diseño de arquitectura de software
-* No son soluciones universales
-* Pueden ser difíciles de aprender
+* No son soluciones universales, muchas veces los patrones de diseños presentan limitaciones o problemáticas que entorpecen el desarrollo.
+* Pueden ser difíciles de aprender, por lo que los tiempos de desarrollo pueden alargarse en un comienzo
 
-## ¿Cómo diferenciar un patrón arquitectónico?
-1. Nivel de abstracción
-2. Ámbito
-3. Estructura
-4. Comportamiento
 
-## ¿Qué son los estilos arquitectónicos?
+## Estilos arquitectónicos
 Son un conjunto de principios y prácticas que se utilizan para diseñar sistemas de software. Proporcionan una plantilla para la estructura y el comportamiento de un sistema.
 
 ## Relación entre los patrones de diseño, arquitectónicos y estilos arquitectóinicos
