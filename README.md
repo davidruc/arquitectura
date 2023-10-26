@@ -1,83 +1,51 @@
-# ✨ Resumen de Arquitectura de Software ✨
 
-## ¿Qué es la arquitectura de software?
+Principios SOLID
 
-La arquitectura de software es el diseño de alto nivel de un sistema de software. Es un plan que define la estructura, las capas, los componentes y las interfaces de un sistema.
+SOLID es un acrónimo que representa cinco principios básicos de la programación orientada a objetos y el diseño. Estos principios fueron desarrollados por Robert C. Martin, un destacado programador y autor de libros sobre diseño de software.
 
-En términos más simples, la arquitectura de software es una forma de organizar el código fuente de un programa. Define cómo los componentes del programa se relacionan entre sí y cómo interactúan con el mundo exterior.
+Los principios SOLID son:
 
-## ¿Por qué es importante la arquitectura de software?
+Single Responsibility Principle (SRP): Cada clase debe tener una única responsabilidad.
+Open/Closed Principle (OCP): Las clases deben ser abiertas para la extensión, pero cerradas para la modificación.
+Liskov Substitution Principle (LSP): Las clases derivadas deben ser sustituibles por sus clases base.
+Interface Segregation Principle (ISP): Las interfaces deben estar separadas en interfaces más pequeñas, cada una de las cuales representa una responsabilidad única.
+Dependency Inversion Principle (DIP): Las clases altas no deben depender de clases bajas, sino de abstracciones.
+Explicación detallada
 
-Proporciona una visión general de un sistema de software, lo que permite a los desarrolladores tomar decisiones informadas sobre el diseño y la implementación. También ayuda a garantizar que el sistema de software sea escalable, adaptable y mantenible.
+Single Responsibility Principle (SRP)
 
-## Patrones de diseño de arquitectura de software
+El principio de responsabilidad única establece que cada clase debe tener una única responsabilidad. Esto significa que una clase debe ser responsable de una sola cosa y no debería tener más de una razón para cambiar.
 
-Los patrones de diseño son soluciones a problemas comunes en el desarrollo de software. Se pueden utilizar para mejorar la calidad, la flexibilidad y la mantenibilidad de un sistema de software.
+Por ejemplo, una clase que representa un cliente no debería ser responsable de almacenar los datos del cliente y de enviar correos electrónicos a los clientes. Estas dos responsabilidades deberían ser asignadas a dos clases diferentes.
 
-**Los patrones de diseño se pueden clasificar en tres categorías principales:**
+Open/Closed Principle (OCP)
 
-1. Patrones creacionales: Estos patrones se utilizan para crear objetos de una manera flexible y reutilizable. Estos patrones resuelven problemas comunes relacionados con la creación de objetos, como la creación de objetos complejos, la creación de objetos a partir de datos y la creación de objetos de manera escalable. Algunos ejemplos de patrones creacionales incluyen:
+El principio abierto/cerrado establece que las clases deben ser abiertas para la extensión, pero cerradas para la modificación. Esto significa que las clases deben ser diseñadas de manera que puedan ser extendidas con nuevas funcionalidad sin tener que modificarlas.
 
-    * Singleton: Este patrón asegura que solo se cree una instancia de una clase.
-    * Factory: Este patrón proporciona una interfaz para crear objetos de una manera abstracta.
-    * Prototype: Este patrón crea nuevos objetos copiando un objeto existente.
-    * Builder: Este patrón separa la construcción de objetos complejos de su representación.
-    * Abstract Factory: Este patrón proporciona una interfaz para crear familias de objetos relacionados.
+Por ejemplo, una clase que representa un producto debería ser abierta para la extensión para agregar nuevos tipos de productos. Sin embargo, la clase no debería tener que modificarse para agregar nuevos tipos de productos.
 
+Liskov Substitution Principle (LSP)
 
-2. Patrones estructurales: Estos patrones se utilizan para organizar las clases y objetos de un sistema de una manera eficiente. Estos patrones resuelven problemas comunes relacionados con la composición de objetos, el encapsulamiento de objetos y la herencia de objetos. Algunos ejemplos serían:
+El principio de sustitución de Liskov establece que las clases derivadas deben ser sustituibles por sus clases base. Esto significa que una clase derivada debe poder usarse en cualquier lugar donde se pueda usar su clase base.
 
-    * Adapter: Este patrón permite que dos clases que no son compatibles se comuniquen entre sí.
-    * Composite: Este patrón permite que los objetos se combinen para formar estructuras jerárquicas.
-    * Decorator: Este patrón agrega funcionalidad a los objetos de manera dinámica.
-    * Facade: Este patrón proporciona una interfaz simple a un sistema complejo.
-    * Flyweight: Este patrón permite que se compartan objetos para ahorrar memoria.
+Por ejemplo, una clase que representa un automóvil debe ser sustituible por una clase que representa un camión. Esto significa que una clase que espera un automóvil debe poder aceptar un camión sin romperse.
 
-3. Patrones de comportamiento: Estos patrones se utilizan para definir cómo los objetos interactúan entre sí. Estos patrones resuelven problemas comunes relacionados con la comunicación entre objetos, la delegación de responsabilidades y el manejo de eventos. Algunos ejemplos de estos patrones son: 
+Interface Segregation Principle (ISP)
 
-    * Observer: Este patrón permite que un objeto observe los cambios en otro objeto.
-    * Strategy: Este patrón permite que un objeto cambie su comportamiento en tiempo de ejecución.
-    * Command: Este patrón encapsula una solicitud como un objeto.
-    * Memento: Este patrón guarda el estado de un objeto para que pueda recuperarse posteriormente.
-    * State: Este patrón permite que un objeto cambie su comportamiento según su estado.
+El principio de segregación de interfaces establece que las interfaces deben estar separadas en interfaces más pequeñas, cada una de las cuales representa una responsabilidad única. Esto significa que las clases no deberían verse obligadas a implementar métodos que no necesitan.
 
-* **Características de los patrones de diseño**
+Por ejemplo, una interfaz que representa un producto no debería tener un método para calcular el impuesto. Este método debería ser parte de una interfaz diferente que representa un producto contable.
 
-1. Son soluciones genéricas: Los patrones de diseño se pueden aplicar a una amplia gama de problemas.
-2. Son reutilizables: Los patrones de diseño se pueden utilizar en diferentes sistemas de software.
-3. Son flexibles: Los patrones de diseño se pueden adaptar a las necesidades específicas de un sistema.
+Dependency Inversion Principle (DIP)
 
-## Patrones arquitectónicos de arquitectura de software
+El principio de inversión de dependencias establece que las clases altas no deben depender de clases bajas, sino de abstracciones. Esto significa que las clases no deberían depender de implementaciones específicas, sino de interfaces abstractas.
 
-Los patrones arquitectónicos son soluciones a problemas comunes en la arquitectura de software. Se pueden utilizar para mejorar la calidad, la flexibilidad y la escalabilidad de un sistema de software.
+Por ejemplo, una clase que representa un cliente no debería depender de una clase específica de base de datos. En su lugar, la clase debería depender de una interfaz abstracta de base de datos.
 
-Los patrones arquitectónicos se pueden clasificar en tres categorías principales:
+Beneficios de los principios SOLID
 
-1. Patrones de integración: Estos patrones se utilizan para integrar diferentes componentes de un sistema. Estos patrones resuelven problemas comunes relacionados con la comunicación entre componentes, la gestión de dependencias y el intercambio de datos.
-2. Patrones de seguridad: Estos patrones se utilizan para proteger un sistema de ataques.
-3. Patrones web: Estos patrones se utilizan para desarrollar aplicaciones web.
+Los principios SOLID ofrecen una serie de beneficios, entre los que se incluyen:
 
-
-
-
-
-### Ventajas de los patrones de diseño de arquitectura de software
-* presentan una reutilización optima, por lo que hace más fácil la uso y rendimiento de funcionalidades
-* Mejora de la calidad del código. 
-### Desventajas de los patrones de diseño de arquitectura de software
-* No son soluciones universales, muchas veces los patrones de diseños presentan limitaciones o problemáticas que entorpecen el desarrollo.
-* Pueden ser difíciles de aprender, por lo que los tiempos de desarrollo pueden alargarse en un comienzo
-
-
-## Estilos arquitectónicos
-Son un conjunto de principios y prácticas que se utilizan para diseñar sistemas de software. Proporcionan una plantilla para la estructura y el comportamiento de un sistema.
-
-## Relación entre los patrones de diseño, arquitectónicos y estilos arquitectóinicos
-* Los patrones de diseño son soluciones específicas para problemas comunes en el diseño de software.
-* Los patrones arquitectónicos son soluciones generales para problemas comunes en la arquitectura de software.
-* Los estilos arquitectónicos son una colección de patrones arquitectónicos que se combinan para formar una plantilla para la estructura y el comportamiento de un sistema.
-
-## Estrategias para elegir un estilo arquitectónico
-1. Los requisitos del sistema
-2. Las limitaciones del sistema
-3. Las preferencias del equipo
+Codigo más mantenible: Los principios SOLID ayudan a crear código que es más fácil de mantener y depurar.
+Codigo más flexible: Los principios SOLID ayudan a crear código que es más fácil de extender y adaptar a nuevos requisitos.
+Codigo más reutilizable: Los principios SOLID ayudan a crear código que es más fácil de reutilizar en diferentes proyectos.
